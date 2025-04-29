@@ -1,0 +1,31 @@
+:root {
+  --main-bg: #141d2b;
+  --dark-bg: #0b121f;
+
+  --text: #a4b1cd;
+  --accent: #9fef00;
+  --heading: #cad2e2;
+
+  --opacity: 50%;
+  --border-color: color-mix(in srgb, currentColor var(--opacity), transparent);
+  --radius: 10px;
+  --table-border-width: 1px;
+}
+
+body {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+nav {
+  min-width: 300px;
+  background-color: var(--dark-bg);
+}
+
+main {
+  flex: 1;
+  background-color: var(--main-bg);
+}
