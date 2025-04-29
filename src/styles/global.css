@@ -7,8 +7,8 @@
   --heading: #cad2e2;
 
   --opacity: 50%;
-  --border-color: color-mix(in srgb, currentColor var(--opacity), transparent);
-  --radius: 10px;
+  --border-color: color-mix(in srgb, var(--text) var(--opacity), transparent);
+  --radius: 5px;
   --table-border-width: 1px;
 }
 
@@ -16,16 +16,63 @@ body {
   display: flex;
   padding: 0px;
   margin: 0px;
+  background-color: var(--main-bg);
   color: var(--text);
   min-height: 100vh;
 }
 
+* {
+  transition: all 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b {
+  color: var(--heading);
+}
+
 nav {
-  min-width: 300px;
+  min-width: 250px;
   background-color: var(--dark-bg);
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.project-container {
+  display: flex;
+  flex-direction: column;
+}
+
+nav button {
+  font-size: 17px;
+  background-color: var(--main-bg);
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 5px 10px;
+  text-align: left;
+  position: relative;
+}
+
+nav button:hover {
+  /* color: var(--accent); */
+  border: 1px solid var(--text);
+}
+
+nav button > svg {
+  position: relative;
+  top: 3.5px;
 }
 
 main {
+  max-width: 900px;
+  margin: 0 auto;
   flex: 1;
-  background-color: var(--main-bg);
+  padding: 30px;
 }
