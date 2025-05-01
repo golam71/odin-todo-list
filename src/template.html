@@ -10,7 +10,7 @@
 <body>
     <nav>
         <h1>Todo List App</h1>
-        <button id="inbox">
+        <button id="Inbox" class="active">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                 viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
                 <path fill="currentColor"
@@ -18,14 +18,14 @@
             </svg>
 
             Inbox</button>
-        <button>
+        <button id="Today">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                 viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE -->
                 <path fill="currentColor"
                     d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2m0 16H5V9h14zm0-12H5V5h14M7 11h5v5H7" />
             </svg>
             Today</button>
-        <button>
+        <button id="This Week">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                 viewBox="0 0 24 24"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE -->
                 <g fill="currentColor">
@@ -40,7 +40,7 @@
             Projects
         </h2>
         <div class="project-container" id="project-conainer">
-            <button>
+            <button id="Dummy Project">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                     viewBox="0 0 24 24"><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE -->
                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -51,7 +51,7 @@
                 </svg>
                 Dummy project</button>
         </div>
-        <button>
+        <button id="Add Project">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                 viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
                 <path fill="currentColor"
@@ -64,6 +64,52 @@
         <h1 id="main-title">
             Inbox
         </h1>
+        <dialog>
+            <form>
+                <label for="title">
+                    Title :
+                    <br>
+                    <input type="text" id="title">
+                </label>
+                <label for="description">
+                    Description :
+                    <br>
+                    <input type="text" id="description">
+                </label>
+                <label for="due-date">
+                    Due Date :
+                    <br>
+                    <input type="date" id="due-date">
+                </label>
+                <label for="priority">
+                    Priority :
+                    <br>
+                    <select id="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </label>
+
+            </form>
+            <div class="btn-container">
+                <button id="submit">Submit</button>
+                <button id="close">Close</button>
+            </div>
+        </dialog>
+        <div class="todo-container">
+            <div class="todo">
+                <p class="todo-title">Buy groceries</p>
+                <p class="todo-description">Milk, eggs, bread, butter</p>
+                <p class="todo-date">2025-05-05</p>
+                <p class="todo-priority">High</p>
+
+                <button>
+                    
+                </button>
+                <button></button>
+            </div>
+        </div>
     </main>
 </body>
 

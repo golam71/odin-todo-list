@@ -1,13 +1,13 @@
 :root {
   --main-bg: #141d2b;
   --dark-bg: #0b121f;
-
+  --light-bg: #1e2939;
   --text: #a4b1cd;
   --accent: #9fef00;
   --heading: #cad2e2;
 
-  --opacity: 50%;
-  --border-color: color-mix(in srgb, var(--text) var(--opacity), transparent);
+  --opacity: 80%;
+  --border-color: color-mix(in srgb, currentColor var(--opacity), transparent);
   --radius: 5px;
   --table-border-width: 1px;
 }
@@ -22,7 +22,13 @@ body {
 }
 
 * {
+  font-size: 15px;
   transition: all 0.3s ease;
+  outline: none;
+}
+::selection {
+  background-color: var(--accent);
+  color: var(--dark-bg);
 }
 
 h1,
@@ -32,6 +38,7 @@ h4,
 h5,
 h6,
 b {
+  font-size: 20px;
   color: var(--heading);
 }
 
@@ -62,7 +69,12 @@ nav button {
 
 nav button:hover {
   /* color: var(--accent); */
-  border: 1px solid var(--text);
+  border: 1px solid var(--border-color);
+}
+
+.active {
+  color: var(--accent);
+  border: 1px solid transparent;
 }
 
 nav button > svg {
@@ -75,4 +87,82 @@ main {
   margin: 0 auto;
   flex: 1;
   padding: 30px;
+}
+
+form,
+dialog {
+  border-radius: var(--radius);
+
+  color: var(--text);
+  border: none;
+  background-color: var(--dark-bg);
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+label {
+  display: block;
+  display: flex !important;
+  flex-direction: column;
+}
+
+input,
+select {
+  border-radius: var(--radius);
+
+  padding: 8px;
+  margin: 10px;
+  background-color: var(--light-bg);
+  color: var(--text);
+  border: none;
+}
+
+option,
+select,
+select * {
+  border-radius: var(--radius);
+
+  background: var(--light-bg);
+  color: var(--text);
+}
+
+.btn-container {
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+}
+
+.btn-container * {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid currentColor;
+  border-radius: var(--radius);
+  outline: none;
+  padding: 7px 15px;
+  display: inherit;
+}
+
+.btn-container *:hover {
+  color: var(--accent);
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 15px;
+  background-color: var(--dark-bg);
+}
+
+.todo p:nth-child(2) {
+  display: none;
+}
+
+.hidden {
+  display: hidden;
 }
