@@ -166,3 +166,32 @@ select * {
 .hidden {
   display: hidden;
 }
+
+.todo button {
+  margin: 0px 5px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  position: relative;
+  top: 3.3px;
+}
+
+.todo-btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.todo:hover p,
+.todo-btn-container {
+  display: none;
+}
+.todo:hover p.todo-description {
+  display: block;
+}
+.todo:hover .todo-btn-container {
+  display: flex;
+}
+.todo-btn-container button:hover {
+  color: var(--accent);
+}
