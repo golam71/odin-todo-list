@@ -153,9 +153,13 @@ select * {
 }
 
 .todo {
+  font-size: 0px !important;
   display: flex;
+  align-items: center;
+  border-radius: var(--radius);
   justify-content: space-around;
   padding: 0px 15px;
+  min-height: 70px;
   background-color: var(--dark-bg);
 }
 
@@ -194,4 +198,23 @@ select * {
 }
 .todo-btn-container button:hover {
   color: var(--accent);
+}
+.title-btn-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  align-items: center;
+}
+.title-btn-container button {
+  padding: 7px 10px;
+  background-color: var(--dark-bg);
+  border: none;
+  outline: none;
+  color: var(--text);
+  border-radius: var(--radius);
+}
+
+.title-btn-container button:hover {
+  background-color: var(--accent);
+  color: var(--dark-bg);
 }

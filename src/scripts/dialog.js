@@ -8,7 +8,12 @@ document.getElementById("close").onclick = () => {
 };
 
 function closeDialog() {
+  document.getElementsByClassName("todo-container")[0].style.display = "block";
   document.getElementsByTagName("dialog")[0].open = false;
+}
+function openDialog() {
+  document.getElementsByClassName("todo-container")[0].style.display = "none";
+  document.getElementsByTagName("dialog")[0].open = true;
 }
 
 function resetDialog() {
@@ -17,3 +22,8 @@ function resetDialog() {
   document.getElementById("due-date").value = "";
   document.getElementById("priority").value = "low";
 }
+
+document.getElementById("add-todo").onclick = () => {
+  resetDialog();
+  openDialog();
+};
