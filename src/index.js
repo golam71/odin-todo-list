@@ -1,5 +1,10 @@
 import "./styles/global.css";
+import "./styles/nav.css";
+import "./styles/dialog.css";
+import "./styles/todo.css";
+
 import "./scripts/dialog.js";
+import "./scripts/todo.js";
 
 function cleanSelection() {
   document.getElementsByClassName("active")[0].classList.toggle("active");

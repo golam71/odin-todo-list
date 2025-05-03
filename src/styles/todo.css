@@ -1,0 +1,60 @@
+.todo-container {
+  display: flex !important;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.todo {
+  font-size: 0px !important;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius);
+  justify-content: space-between;
+  padding: 0px 15px;
+  min-height: 85px;
+  background-color: var(--dark-bg);
+  gap: 20px;
+}
+
+.todo p:nth-child(2) {
+  display: none;
+}
+
+.hidden {
+  display: hidden;
+}
+
+.todo button {
+  margin: 0px 5px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  position: relative;
+  top: 3.3px;
+}
+
+.todo-btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.todo:hover p,
+.todo-btn-container {
+  display: none;
+}
+.todo:hover p.todo-description {
+  display: block;
+}
+.todo:hover .todo-btn-container {
+  display: flex;
+}
+.todo-btn-container button:hover {
+  color: var(--accent);
+}
+.todo-description {
+  flex: 1;
+}
+.todo-title {
+  flex: 1;
+}

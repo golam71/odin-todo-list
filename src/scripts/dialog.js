@@ -1,5 +1,20 @@
+import { addTodoToDOM } from "./todo.js";
+
+function submitDialogData() {
+  return {
+    title: document.getElementById("title").value,
+    description: document.getElementById("description").value,
+    dueDate: document.getElementById("due-date").value,
+    priority: document.getElementById("priority").value,
+  };
+}
+
 document.getElementById("submit").onclick = () => {
-  console.log(4);
+  console.log(submitDialogData());
+
+  addTodoToDOM(submitDialogData());
+  resetDialog();
+  closeDialog();
 };
 
 document.getElementById("close").onclick = () => {
@@ -9,11 +24,11 @@ document.getElementById("close").onclick = () => {
 
 function closeDialog() {
   document.getElementsByClassName("todo-container")[0].style.display = "block";
-  document.getElementsByTagName("dialog")[0].open = false;
+  document.querySelector("dialog").close();
 }
 function openDialog() {
   document.getElementsByClassName("todo-container")[0].style.display = "none";
-  document.getElementsByTagName("dialog")[0].open = true;
+  document.querySelector("dialog").showModal();
 }
 
 function resetDialog() {

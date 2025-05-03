@@ -1,0 +1,40 @@
+nav {
+    min-width: 250px;
+    background-color: var(--dark-bg);
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .project-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav button {
+    font-size: 17px;
+    background-color: var(--main-bg);
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: var(--radius);
+    color: var(--text);
+    padding: 5px 10px;
+    text-align: left;
+    position: relative;
+  }
+  
+  nav button:hover {
+    /* color: var(--accent); */
+    border: 1px solid var(--border-color);
+  }
+  
+  .active {
+    color: var(--accent);
+    border: 1px solid transparent;
+  }
+  
+  nav button > svg {
+    position: relative;
+    top: 3.5px;
+  }
+  

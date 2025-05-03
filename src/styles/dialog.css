@@ -1,0 +1,55 @@
+form,
+dialog {
+  border-radius: var(--radius);
+
+  color: var(--text);
+  border: none;
+  background-color: var(--dark-bg);
+  width: 500px;
+}
+
+label {
+  display: block;
+  display: flex !important;
+  flex-direction: column;
+}
+
+input,
+select {
+  border-radius: var(--radius);
+
+  padding: 8px;
+  margin: 10px;
+  background-color: var(--light-bg);
+  color: var(--text);
+  border: none;
+}
+
+option,
+select,
+select * {
+  border-radius: var(--radius);
+
+  background: var(--light-bg);
+  color: var(--text);
+}
+
+.btn-container {
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+}
+
+.btn-container * {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid currentColor;
+  border-radius: var(--radius);
+  outline: none;
+  padding: 7px 15px;
+  display: inherit;
+}
+
+.btn-container *:hover {
+  color: var(--accent);
+}
