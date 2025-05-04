@@ -1,18 +1,7 @@
-export class Todo {
-  constructor(title, description, dueDate, priority) {
-    if (!new.target) {
-      throw new Error("Classes must be called with new");
-    }
-    this.title = title;
-    this.description = description;
-    this.dueDate = dueDate;
-    this.priority = priority;
-  }
-}
-
 export function addTodoToDOM({ title, description, dueDate, priority }) {
   let todoDiv = document.createElement("div");
   todoDiv.classList.add("todo");
+  todoDiv.id = "todo"
 
   let todoTitle = document.createElement("p");
   todoTitle.classList.add("todo-title");
@@ -58,9 +47,17 @@ export function addTodoToDOM({ title, description, dueDate, priority }) {
 }
 
 // Example usage:
-addTodoToDOM({
-  title: "Learn JavaScript",
-  description: "Complete the JavaScript course on Odin Project",
-  dueDate: "2023-10-01",
-  priority: "High",
-});
+// addTodoToDOM({
+//   title: "Learn JavaScript",
+//   description: "Complete the JavaScript course on Odin Project",
+//   dueDate: "2023-10-01",
+//   priority: "High",
+// });
+
+// addTodoToDOM({
+//   title: "Learn JavaScript",
+//   description: "Complete the JavaScript course on Odin Project",
+//   dueDate: "2023-10-01",
+//   priority: "High",
+// });
+

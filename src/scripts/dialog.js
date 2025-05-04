@@ -1,4 +1,5 @@
 import { addTodoToDOM } from "./todo.js";
+import { saveData } from "./save.js";
 
 function submitDialogData() {
   return {
@@ -10,9 +11,8 @@ function submitDialogData() {
 }
 
 document.getElementById("submit").onclick = () => {
-  console.log(submitDialogData());
-
   addTodoToDOM(submitDialogData());
+  saveData();
   resetDialog();
   closeDialog();
 };
@@ -35,7 +35,7 @@ function resetDialog() {
   document.getElementById("title").value = "";
   document.getElementById("description").value = "";
   document.getElementById("due-date").value = "";
-  document.getElementById("priority").value = "low";
+  document.getElementById("priority").value = "Low";
 }
 
 document.getElementById("add-todo").onclick = () => {

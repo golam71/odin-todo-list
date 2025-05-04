@@ -5,6 +5,8 @@ import "./styles/todo.css";
 
 import "./scripts/dialog.js";
 import "./scripts/todo.js";
+import "./scripts/save.js";
+import "./scripts/load.js";
 
 function cleanSelection() {
   document.getElementsByClassName("active")[0].classList.toggle("active");
