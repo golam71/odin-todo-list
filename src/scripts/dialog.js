@@ -26,7 +26,7 @@ function closeDialog() {
   document.getElementsByClassName("todo-container")[0].style.display = "block";
   document.querySelector("dialog").close();
 }
-function openDialog() {
+export function openDialog() {
   document.getElementsByClassName("todo-container")[0].style.display = "none";
   document.querySelector("dialog").showModal();
 }
