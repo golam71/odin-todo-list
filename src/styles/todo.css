@@ -16,6 +16,10 @@
   gap: 20px;
 }
 
+.todo-priority {
+  min-width: 40px;
+}
+
 .todo p:nth-child(2) {
   display: none;
 }
