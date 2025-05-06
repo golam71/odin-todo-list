@@ -1,4 +1,4 @@
-export function addTodoToDOM({ title, description, dueDate, priority }) {
+export function addTodoToDOM({ title, description, date, priority }) {
   let todoDiv = document.createElement("div");
   todoDiv.classList.add("todo");
   todoDiv.id = "todo";
@@ -13,7 +13,7 @@ export function addTodoToDOM({ title, description, dueDate, priority }) {
 
   let todoDate = document.createElement("p");
   todoDate.classList.add("todo-date");
-  todoDate.textContent = dueDate;
+  todoDate.innerText = date;
 
   let todoPriority = document.createElement("p");
   todoPriority.classList.add("todo-priority");
@@ -46,21 +46,19 @@ export function addTodoToDOM({ title, description, dueDate, priority }) {
   todoContainer.appendChild(todoDiv);
 }
 
-function clearTodo() {
-  document.getElementById("todo-container").innerHTML = "";
-}
+
 
 // Example usage:
-// addTodoToDOM({
-//   title: "Learn JavaScript",
-//   description: "Complete the JavaScript course on Odin Project",
-//   dueDate: "2023-10-01",
-//   priority: "High",
-// });
+addTodoToDOM({
+  title: "Learn JavaScript",
+  description: "Complete the JavaScript course on Odin Project",
+  date: "2023-10-01",
+  priority: "High",
+});
 
-// addTodoToDOM({
-//   title: "Learn JavaScript",
-//   description: "Complete the JavaScript course on Odin Project",
-//   dueDate: "2023-10-01",
-//   priority: "High",
-// });
+addTodoToDOM({
+  title: "Learn JavaScript",
+  description: "Complete the JavaScript course on Odin Project",
+  date: "2023-10-01",
+  priority: "High",
+});

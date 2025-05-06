@@ -1,3 +1,4 @@
+import { loadData } from "./load.js";
 export function saveData() {
   let list = [];
   let pageTitle = document.getElementById("main-title").innerText;
@@ -9,5 +10,10 @@ export function saveData() {
     list.push({ title, description, date, priority });
   });
 
+  // Sort the list by date (or any other property)
+  list.sort((a, b) => new Date(a.date) - new Date(b.date));
+
   localStorage.setItem(`${pageTitle}`, JSON.stringify(list));
+  document.getElementById("todo-container").innerHTML = "";
+  loadData();
 }

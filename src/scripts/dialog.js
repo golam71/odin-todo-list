@@ -5,7 +5,7 @@ function submitDialogData() {
   return {
     title: document.getElementById("title").value,
     description: document.getElementById("description").value,
-    dueDate: document.getElementById("due-date").value,
+    date: document.getElementById("due-date").value,
     priority: document.getElementById("priority").value,
   };
 }
