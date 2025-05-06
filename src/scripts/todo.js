@@ -46,8 +46,6 @@ export function addTodoToDOM({ title, description, date, priority }) {
   todoContainer.appendChild(todoDiv);
 }
 
-
-
 // Example usage:
 // addTodoToDOM({
 //   title: "Learn JavaScript",
