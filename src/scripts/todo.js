@@ -49,16 +49,16 @@ export function addTodoToDOM({ title, description, date, priority }) {
 
 
 // Example usage:
-addTodoToDOM({
-  title: "Learn JavaScript",
-  description: "Complete the JavaScript course on Odin Project",
-  date: "2023-10-01",
-  priority: "High",
-});
+// addTodoToDOM({
+//   title: "Learn JavaScript",
+//   description: "Complete the JavaScript course on Odin Project",
+//   date: "2023-10-01",
+//   priority: "High",
+// });
 
-addTodoToDOM({
-  title: "Learn JavaScript",
-  description: "Complete the JavaScript course on Odin Project",
-  date: "2023-10-01",
-  priority: "High",
-});
+// addTodoToDOM({
+//   title: "Learn JavaScript",
+//   description: "Complete the JavaScript course on Odin Project",
+//   date: "2023-10-01",
+//   priority: "High",
+// });
