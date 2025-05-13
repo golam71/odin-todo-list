@@ -8,8 +8,10 @@ import "./scripts/todo.js";
 import "./scripts/save.js";
 import "./scripts/load.js";
 import "./scripts/edit-delete.js";
+import "./scripts/add-project.js";
 
 import { loadData } from "./scripts/load.js";
+import { loadToday } from "./scripts/today.js";
 
 function cleanSelection() {
   document.getElementsByClassName("active")[0].classList.toggle("active");
@@ -24,5 +26,9 @@ document.querySelector("nav").addEventListener("click", function (e) {
     document.getElementById("main-title").innerText = element.id;
     document.getElementById("todo-container").innerHTML = "";
     loadData();
+
+    if (element.id == "Today") {
+      loadToday();
+    }
   }
 });

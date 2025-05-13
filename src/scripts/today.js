@@ -1,13 +1,18 @@
-let array = [];
+import { addTodoToDOM } from "./todo.js";
 
-Object.keys(localStorage).forEach((key) => {
-  let keys = JSON.parse(localStorage.getItem(key));
-  array = array.concat(keys);
-});
+export function loadToday() {
+  let array = [];
 
-const todayDate = new Date().toISOString().split("T")[0];
+  Object.keys(localStorage).forEach((key) => {
+    let keys = JSON.parse(localStorage.getItem(key));
+    array = array.concat(keys);
+  });
 
-const filtered = array.filter((item) => item.date === todayDate);
-filtered.forEach((item) => {
-  console.log(item);
-});
+  const todayDate = new Date().toISOString().split("T")[0];
+
+  const filtered = array.filter((item) => item.date === todayDate);
+  filtered.forEach((item) => {
+    console.log(item);
+    addTodoToDOM(item);
+  });
+}

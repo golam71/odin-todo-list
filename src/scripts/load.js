@@ -5,14 +5,9 @@ export function loadData() {
   if (data) {
     let jsonData = JSON.parse(data);
     jsonData.forEach((todo) => {
-  
       addTodoToDOM(todo);
     });
   }
 }
 
 loadData();
-
-function editData() {
-  document.getElementById("todo-edit");
-}
