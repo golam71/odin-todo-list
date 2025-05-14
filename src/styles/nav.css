@@ -13,7 +13,8 @@ nav {
 }
 
 nav button,
-.add-project {
+.add-project,
+#save {
   font-size: 17px;
   background-color: var(--main-bg);
   border: 1px solid transparent;

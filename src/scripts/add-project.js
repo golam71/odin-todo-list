@@ -35,3 +35,21 @@ document.getElementById("save").onclick = () => {
   document.getElementById("Add Project").style.display = "block";
   document.getElementById("inputid").remove();
 };
+
+// let array = ["Inbox", "Important", "Long Term", "Dummy project"];
+
+// let projects = Object.keys(localStorage).filter((item) => {
+//   !array.includes(item);
+// });
+
+// console.log(projects);
+
+let array = ["Inbox", "Important", "Long Term", "save"];
+
+let projects = Object.keys(localStorage).filter((item) => {
+  return !array.includes(item);
+});
+
+projects.forEach((project) => {
+  addProject(project);
+});
