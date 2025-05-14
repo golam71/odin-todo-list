@@ -18,6 +18,11 @@ function addProject(name) {
   document.getElementById("project-container").appendChild(button);
 }
 
+function removeProject(name) {
+  delete localStorage[name];
+}
+
+
 document.getElementById("Add Project").onclick = () => {
   let input = document.createElement("input");
   input.style.margin = "0px 0px";
