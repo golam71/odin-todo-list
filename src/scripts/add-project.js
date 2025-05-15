@@ -22,7 +22,6 @@ function removeProject(name) {
   delete localStorage[name];
 }
 
-
 document.getElementById("Add Project").onclick = () => {
   let input = document.createElement("input");
   input.style.margin = "0px 0px";
@@ -38,7 +37,10 @@ document.getElementById("save").onclick = () => {
   addProject(projectName);
   document.getElementById("save").style.display = "none";
   document.getElementById("Add Project").style.display = "block";
+  let value = document.getElementById("inputid").value;
   document.getElementById("inputid").remove();
+  console.log("value", value);
+  document.getElementById("main-title").innerHTML = value;
 };
 
 let array = ["Inbox", "Important", "Long Term", "save"];
