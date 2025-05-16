@@ -50,3 +50,13 @@ nav button svg,
   margin: 0 auto;
   /* margin-top: 15px; */
 }
+
+.delSvg {
+  display: none;
+}
+button:hover .delSvg {
+  display: block;
+}
+.delSvg:hover {
+  color: var(--accent);
+}

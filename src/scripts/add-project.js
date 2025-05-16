@@ -1,5 +1,8 @@
 function addProject(name) {
   let button = document.createElement("button");
+  button.style.display = "flex";
+  button.style.gap = "10px";
+  button.style.alignContent = "center";
   button.id = name;
 
   let svgString = `
@@ -11,11 +14,17 @@ function addProject(name) {
       </svg>
   `;
   let delSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M7 21q-.825 0-1.412-.587T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413T17 21zm2-4h2V8H9zm4 0h2V8h-2z"></path></svg>`;
-  
+
   let span = document.createElement("span");
   span.innerHTML = svgString;
   button.append(span);
   button.append(name);
+
+  let span2 = document.createElement("span");
+  span2.innerHTML = delSvg;
+  span2.style.marginLeft = "auto";
+  span2.classList.add("delSvg");
+  button.append(span2);
 
   document.getElementById("project-container").appendChild(button);
 }
@@ -43,6 +52,7 @@ document.getElementById("save").onclick = () => {
   document.getElementById("inputid").remove();
   console.log("value", value);
   document.getElementById("main-title").innerHTML = value;
+  document.getElementById("todo-container").innerHTML = "";
 };
 
 let array = ["Inbox", "Important", "Long Term", "save"];
