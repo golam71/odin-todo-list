@@ -1,3 +1,16 @@
+function setDelFunc() {
+  document
+    .getElementById("project-container")
+    .addEventListener("click", (e) => {
+      if (e.target.closest(".delSvg")) {
+        let button = e.target.closest("button");
+        console.log(button.id);
+        localStorage.removeItem(button.id);
+        button.remove();
+      }
+    });
+}
+
 function addProject(name) {
   let button = document.createElement("button");
   button.style.display = "flex";
@@ -52,6 +65,7 @@ document.getElementById("save").onclick = () => {
   document.getElementById("inputid").remove();
   console.log("value", value);
   document.getElementById("main-title").innerHTML = value;
+  setDelFunc();
   document.getElementById("todo-container").innerHTML = "";
 };
 
@@ -64,3 +78,5 @@ let projects = Object.keys(localStorage).filter((item) => {
 projects.forEach((project) => {
   addProject(project);
 });
+
+setDelFunc();

@@ -14,7 +14,9 @@ import { loadData } from "./scripts/load.js";
 import { loadToday } from "./scripts/today.js";
 
 function cleanSelection() {
-  document.getElementsByClassName("active")[0].classList.toggle("active");
+  if (document.getElementsByClassName("active")[0]) {
+    document.getElementsByClassName("active")[0];
+  }
 }
 
 document.querySelector("nav").addEventListener("click", function (e) {
