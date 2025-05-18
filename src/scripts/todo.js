@@ -47,16 +47,61 @@ export function addTodoToDOM({ title, description, date, priority }) {
 }
 
 // Example usage:
-// addTodoToDOM({
-//   title: "Learn JavaScript",
-//   description: "Complete the JavaScript course on Odin Project",
-//   date: "2023-10-01",
-//   priority: "High",
-// });
 
-// addTodoToDOM({
-//   title: "Learn JavaScript",
-//   description: "Complete the JavaScript course on Odin Project",
-//   date: "2023-10-01",
-//   priority: "High",
-// });
+if (localStorage.length == 0) {
+  addTodoToDOM({
+    title: "Morning Exercise",
+    description: "Do a 30-minute workout session",
+    date: "2023-10-02",
+    priority: "Medium",
+  });
+
+  addTodoToDOM({
+    title: "Grocery Shopping",
+    description: "Buy vegetables, fruits, and other essentials",
+    date: "2023-10-02",
+    priority: "High",
+  });
+
+  addTodoToDOM({
+    title: "Work on Project",
+    description: "Complete the pending tasks for the client project",
+    date: "2023-10-03",
+    priority: "High",
+  });
+
+  addTodoToDOM({
+    title: "Read a Book",
+    description: "Read 20 pages of a self-improvement book",
+    date: "2023-10-03",
+    priority: "Low",
+  });
+
+  addTodoToDOM({
+    title: "Clean the House",
+    description: "Vacuum and organize the living room and kitchen",
+    date: "2023-10-04",
+    priority: "Medium",
+  });
+
+  addTodoToDOM({
+    title: "Prepare Presentation",
+    description: "Work on slides for the upcoming meeting",
+    date: "2023-10-05",
+    priority: "High",
+  });
+
+  addTodoToDOM({
+    title: "Play with Cats",
+    description: "Spend some quality time with your cats",
+    date: "2023-10-06",
+    priority: "Low",
+  });
+
+  addTodoToDOM({
+    title: "HackTheBox Challenge",
+    description: "Solve a new HackTheBox machine for practice",
+    date: "2023-10-07",
+    priority: "High",
+  });
+}

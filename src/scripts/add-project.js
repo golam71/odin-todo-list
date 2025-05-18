@@ -1,13 +1,16 @@
 function setDelFunc() {
-  document
-    .getElementById("project-container")
-    .addEventListener("click", (e) => {
+  document.querySelectorAll(".delSvg").forEach((item) => {
+    item.addEventListener("click", (e) => {
       let button = e.target.closest("button");
-      console.log(button.id);
-      localStorage.removeItem(button.id);
-      delete localStorage[button.id];
-      button.remove();
+      if (button && button.id) {
+        console.log(button.id);
+        localStorage.removeItem(button.id);
+        delete localStorage[button.id];
+        button.remove();
+        button.innerHTML = "";
+      }
     });
+  });
 }
 
 function addProject(name) {
