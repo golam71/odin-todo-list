@@ -2,12 +2,11 @@ function setDelFunc() {
   document
     .getElementById("project-container")
     .addEventListener("click", (e) => {
-      if (e.target.closest(".delSvg")) {
-        let button = e.target.closest("button");
-        console.log(button.id);
-        localStorage.removeItem(button.id);
-        button.remove();
-      }
+      let button = e.target.closest("button");
+      console.log(button.id);
+      localStorage.removeItem(button.id);
+      delete localStorage[button.id];
+      button.remove();
     });
 }
 
