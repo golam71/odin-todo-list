@@ -1,16 +1,16 @@
-# .github/workflows/deploy.yml
-name: Build and Deploy
+# .github/workflows/gh-pages.yml
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -24,8 +24,9 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Upload dist as artifact
-        uses: actions/upload-artifact@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: dist
-          path: dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+
