@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+
+<body>
+    <nav>
+        <h1>Todo List App</h1>
+        <button id="Inbox" class="active">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                <path fill="currentColor"
+                    d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm7-5q.95 0 1.725-.55T14.8 14H19V5H5v9h4.2q.3.9 1.075 1.45T12 16m-5-3.75h10v-2H7zm0-3.5h10v-2H7z" />
+            </svg>
+
+            Inbox</button>
+        <button id="Important">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE -->
+                <path fill="currentColor"
+                    d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2m0 16H5V9h14zm0-12H5V5h14M7 11h5v5H7" />
+            </svg>
+            Important</button>
+        <button id="Long Term">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                viewBox="0 0 24 24"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE -->
+                <g fill="currentColor">
+                    <path
+                        d="M16 2c.183 0 .355.05.502.135l.033.02c.28.177.465.49.465.845v1h1a3 3 0 0 1 2.995 2.824L21 7v12a3 3 0 0 1-2.824 2.995L18 22H6a3 3 0 0 1-2.995-2.824L3 19V7a3 3 0 0 1 2.824-2.995L6 4h1V3a1 1 0 0 1 .514-.874l.093-.046l.066-.025l.1-.029l.107-.019L8 2q.083 0 .161.013l.122.029l.04.012l.06.023c.328.135.568.44.61.806L9 3v1h6V3a1 1 0 0 1 1-1m3 7H5v9.625c0 .705.386 1.286.883 1.366L6 20h12c.513 0 .936-.53.993-1.215l.007-.16z" />
+                    <path
+                        d="M9.015 13a1 1 0 0 1-1 1a1.001 1.001 0 1 1-.005-2c.557 0 1.005.448 1.005 1m4 0a1 1 0 0 1-1 1a1.001 1.001 0 1 1-.005-2c.557 0 1.005.448 1.005 1m4.005 0a1 1 0 0 1-1 1a1.001 1.001 0 1 1-.005-2c.557 0 1.005.448 1.005 1m-5 2a1 1 0 0 1 0 2a1.001 1.001 0 1 1-.005-2zm-3.005 1a1 1 0 0 1-1 1a1.001 1.001 0 1 1-.005-2c.557 0 1.005.448 1.005 1" />
+                </g>
+            </svg>
+            Long Term</button>
+        <h2>
+            Projects
+        </h2>
+        <div class="project-container" id="project-container">
+
+        </div>
+        <div id="Add Project" class="add-project">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                <path fill="currentColor"
+                    d="M11 17h2v-4h4v-2h-4V7h-2v4H7v2h4zm1 5q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22" />
+            </svg>
+            Add Project
+        </div>
+        <div id="save" style="display: none;">Save</div>
+    </nav>
+    <main>
+        <div class="title-btn-container">
+            <h1 id="main-title">
+                Inbox
+            </h1>
+            <div>
+                <button id="add-todo">Add todo</button>
+
+            </div>
+
+        </div>
+        <dialog>
+            <form>
+                <label for="title">
+                    Title :
+                    <br>
+                    <input type="text" id="title">
+                </label>
+                <label for="description">
+                    Description :
+                    <br>
+                    <input type="text" id="description">
+                </label>
+                <label for="due-date">
+                    Due Date :
+                    <br>
+                    <input type="date" id="due-date">
+                </label>
+                <label for="priority">
+                    Priority :
+                    <br>
+                    <select id="priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </label>
+
+            </form>
+            <div class="btn-container">
+                <button id="submit">Submit</button>
+                <button id="close">Close</button>
+            </div>
+        </dialog>
+        <div class="todo-container" id="todo-container">
+
+        </div>
+    </main>
+</body>
+
+</html>
